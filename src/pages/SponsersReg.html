@@ -505,15 +505,18 @@
         // Add cost estimator display
         const submitSection = document.querySelector('.pt-6.border-t');
         const costEstimator = document.createElement('div');
-        costEstimator.className = 'bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6';
+        costEstimator.className = 'bg-gray-800 border border-gray-600 rounded-lg p-4 mb-6';
         costEstimator.innerHTML = `
             <div class="flex justify-between items-center">
-                <span class="text-lg font-medium text-gray-700">Estimated Total Cost:</span>
-                <span id="estimatedCost" class="text-2xl font-bold text-blue-600">$0</span>
+                <span class="text-lg font-medium text-gray-200">Estimated Total Cost:</span>
+                <span id="estimatedCost" class="text-2xl font-bold text-blue-400">$0</span>
             </div>
-            <p class="text-sm text-gray-500 mt-1">Final pricing subject to contract negotiation</p>
+            <p class="text-sm text-gray-400 mt-1">Final pricing subject to contract negotiation</p>
         `;
         submitSection.insertBefore(costEstimator, submitSection.firstChild);
+        
+        // Initial cost calculation
+        updateEstimatedCost();
     </script>
 </body>
 </html>
